@@ -1,5 +1,4 @@
 # Pixelsketch
-This page is under construction, check back soon
 ## Installation
 ### Requirements
 Before you begin, make sure you have already installed:
