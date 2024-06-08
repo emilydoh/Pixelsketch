@@ -8,6 +8,9 @@
 h1 {
     font-family: '04b';
     color: #EEEEEE;
+    margin: 20px 30px;
+    text-shadow: 3px 3px #26272a;
+    font-size: 50px;
 }
 
 @font-face {
@@ -15,51 +18,99 @@ h1 {
     src: url("./fonts/upheavtt.ttf");
 }
 
-p, h2 {
+p, h2, button {
     font-family: 'upheaval';
 }
 
-p {
+p, button {
     color: #76ABAE;
 }
 
 h2 {
     color: #EEEEEE;
+    text-shadow: 3px 3px #26272a;
 }
 
-* {
+:root {
     background-color: #31363F;
 }
 
 .toolbar {
-    background-color: #76ABAE;
-    width: 200px;
+    /* background-color: #76ABAE; */
+    width: 250px;
 }
 
 .gridContainer {
+    /* margin: auto; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
+    max-width: 95vw;
+    margin: auto;
 }
 
 .grid {
     display: grid;
+    box-shadow: 3px 3px #26272a;
 }
 
 .pixel {
     width: 30px;
     height: 30px;
-    border: 1px solid #ccc;
-}
-
-.sidebarContainer {
-    width: 18vw;
-    background-color: blue;
+    border: 1px solid #c5c5c5;
 }
 
 .colorPicker {
-    height: 20px;
-    width: 20px;
+    height: 55px;
+    width: 60px;
     border: 0px;
+    background-color: transparent;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+p {
+    color:#31363F;
+}
+
+select {
+    width: 250px;
+    font-family: 'upheaval';
+    font-size: 28px;
+    font-weight: lighter;
+    color: #383a3e;
+    text-align: center;
+    margin-top: 1px;
+}
+
+button {
+    background-color: #76ABAE;
+    color: #31363F;
+    height: 50px;
+    width: 250px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 12px;
+    font-size: 28px;
+    box-shadow: 3px 3px #26272a;
+}
+
+.sidebarTextItemContainer {
+    height: 50px;
+    width: 250px;
+    background-color: #76ABAE;
+    /* text-align: center; */
+    border-radius: 4px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    box-shadow: 3px 3px #26272a;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
 }

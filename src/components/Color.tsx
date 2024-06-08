@@ -1,12 +1,15 @@
-function Color() {
+interface ColorProps {
+    currentlySelectedColor : string
+    handleSelectedColorChange : ( newColor : string ) => void;
+}
+
+export const Color : React.FC<ColorProps> = ( {handleSelectedColorChange, currentlySelectedColor} ) => {
     return (
         <>
-            <div>
-                <p>COLOR</p>
-                <input className='colorPicker' type='color' value='#76ABAE'></input>
+            <div className="sidebarTextItemContainer">
+                <p>COLOR:</p>
             </div>
+            <input className='colorPicker' type='color' value={currentlySelectedColor} onChange = { (e) => handleSelectedColorChange(e.target.value) }></input>
         </>
     );
 }
-
-export default Color;

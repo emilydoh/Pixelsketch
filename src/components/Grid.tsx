@@ -5,13 +5,13 @@ import Toolbar from "./Toolbar.tsx";
 function Grid() {
   // default measurements for our square grid is 15 x 15
   const DEFAULT_SIZE = 225;
-  const DEFAULT_COLOR = 'white'
+  const DEFAULT_BACKGROUND_COLOR = 'white'
+  const DEFAULT_COLOR = '#F58616'
 
   const [gridSize, setGridSize] = useState(DEFAULT_SIZE);
   // colors contains state of the pixels on the board (color and index)
   const [colors, setColors] = useState<boxInfo[]>(makeInitialColorsGrid);
-  // *** to do: implement logic for changing color *** 
-  const [currentlySelectedColor, setCurrentlySelectedColor] = useState('white');
+  const [currentlySelectedColor, setCurrentlySelectedColor] = useState(DEFAULT_COLOR);
 
   interface boxInfo {
     color: string;
@@ -21,17 +21,17 @@ function Grid() {
 
   function makeInitialColorsGrid() : boxInfo[] {
     const newGrid = Array.from({ length: gridSize }, (_, i) => ({
-      color: DEFAULT_COLOR,
+      color: DEFAULT_BACKGROUND_COLOR,
       index: i,
     }));
     return newGrid;
   }
 
-  function changeColor(selectedIndex : number) {
+  function changePixelColor(selectedIndex : number) {
     setColors((colors) => { 
       const newColors = colors.map((box) => {
           if (box.index == selectedIndex ) {
-            return {...box, color:'#76ABAE'};
+            return {...box, color: currentlySelectedColor};
           }
           else {
             return {...box};
@@ -51,20 +51,24 @@ function Grid() {
   // clears the grid to white
   function resetGridSpecifiedSize(newSize : number) {
     const newGrid = Array.from({ length: newSize }, (_, i) => ({
-      color: DEFAULT_COLOR,
+      color: DEFAULT_BACKGROUND_COLOR,
       index: i,
     }));
     setColors(newGrid);
   }
 
+  function handleSelectedColorChange( newColor : string) {
+    setCurrentlySelectedColor(newColor);
+  }
+
   return (
     <div className="gridContainer">
-      <Toolbar handleCanvasSizeChange={handleNewGridSize} handleClearClick={() => resetGridSpecifiedSize(gridSize)}></Toolbar>
+      <Toolbar handleCanvasSizeChange={handleNewGridSize} handleClearClick={() => resetGridSpecifiedSize(gridSize)} handleSelectedColorChange = {handleSelectedColorChange} currentlySelectedColor={currentlySelectedColor}></Toolbar>
       <div className="grid" style={{ gridTemplateColumns: `repeat(${Math.sqrt(gridSize)}, 1fr)` }}>
         {
           colors.map((entry) => {
             return (
-              <Pixel key = {`${entry.index}`} color= {entry.color} index = {entry.index} handleColorChange={() => changeColor(entry.index)}></Pixel>
+              <Pixel key = {`${entry.index}`} color= {entry.color} index = {entry.index} handleColorChange={() => changePixelColor(entry.index)}></Pixel>
             );
           })
         }

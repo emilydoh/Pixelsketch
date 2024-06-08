@@ -1,22 +1,25 @@
 import CanvasSize from "./CanvasSize";
-import Color from "./Color";
+import {Color} from "./Color";
 import {Clear} from "./Clear";
+import { Eraser } from "./Eraser"; 
 
 interface ToolbarProps {
     handleCanvasSizeChange : ( newSize : number ) => void;
     handleClearClick : () => void;
+    handleSelectedColorChange : ( newColor : string ) => void;
+    currentlySelectedColor : string
 }
 
-export const Toolbar : React.FC<ToolbarProps> = ( { handleCanvasSizeChange , handleClearClick} ) => {
+export const Toolbar : React.FC<ToolbarProps> = ( { handleCanvasSizeChange , handleClearClick, handleSelectedColorChange, currentlySelectedColor } ) => {
     return (
     <div className = "toolbar">
         <h2>TOOLS</h2>
         <CanvasSize handleCanvasSizeChange = {handleCanvasSizeChange}></CanvasSize>
-        {/*** to do : implement these features ***
-         <Eraser></Eraser> */}
+        <Eraser handleEraserClick = {() => handleSelectedColorChange('#FFFFFF')}></Eraser>
         <Clear handleClearClick={handleClearClick}></Clear> 
-        <Color></Color>
-        {/* <Save></Save> */}
+        <Color handleSelectedColorChange = {handleSelectedColorChange} currentlySelectedColor={currentlySelectedColor}></Color>
+        {/*/*** to do : implement these features ***
+         <Save></Save> */}
     </div>
     );
 }

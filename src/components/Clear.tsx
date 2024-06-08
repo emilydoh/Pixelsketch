@@ -4,6 +4,8 @@ interface ClearProps {
 
 export const Clear : React.FC<ClearProps> = ( { handleClearClick } ) => {
     return(
-        <button onClick={handleClearClick}>CLEAR</button>
+        <div>
+            <button onClick={handleClearClick}>CLEAR</button>
+        </div>
     );
 }
