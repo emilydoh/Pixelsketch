@@ -1,2 +1,5 @@
 # Pixelsketch
- pixel art editor built using react
+This page is under construction, check back soon
+## Installation
+## Screenshots
+
