@@ -1,6 +1,8 @@
 # Pixelsketch
 A web app for users to make pixel art, built in React.
 
+[Demo](https://emilydoh.github.io/Pixelsketch/)
+
 ## Installation
 ### Requirements
 Before you begin, make sure you have already installed:
