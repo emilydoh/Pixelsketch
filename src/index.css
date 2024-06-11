@@ -98,7 +98,6 @@ button {
     height: 50px;
     width: 250px;
     background-color: #76ABAE;
-    /* text-align: center; */
     border-radius: 4px;
     font-size: 28px;
     display: flex;
@@ -141,8 +140,8 @@ h2 {
     }
 
     .pixel {
-        width: 42px;
-        height: 42px;
+        width: 64px;
+        height: 64px;
     }
 
     .grid {
@@ -179,8 +178,8 @@ h2 {
             }
         
             .pixel {
-                width: 35px;
-                height: 35px;
+                width: 53px;
+                height: 53px;
             }
         
             .grid {
@@ -220,8 +219,8 @@ h2 {
     }
 
     .pixel {
-        width: 28px;
-        height: 28px;
+        width: 42px;
+        height: 42px;
     }
 
     .colorPicker {
