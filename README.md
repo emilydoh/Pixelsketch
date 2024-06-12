@@ -31,6 +31,6 @@ npm run dev
 ## Screenshots
 ![pixelsketch_screencap](https://github.com/emilydoh/Pixelsketch/assets/113153067/d7e56d92-e91a-4024-b0f6-967ac3829d2e)
 
-## Gallery
-![amanda's cute animal pixel art](https://github.com/emilydoh/Pixelsketch/assets/113153067/d6a6995d-3940-463f-9136-d785af39503a)
+## Art Gallery
+![amanda's cute animal pixel art](https://github.com/emilydoh/Pixelsketch/assets/113153067/17c1974e-bfca-475c-97ec-6f9a1357aa22)
 
