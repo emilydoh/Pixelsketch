@@ -1,5 +1,5 @@
 # Pixelsketch
-A web app for users to make pixel art, built in React.
+A web app for users to make pixel art and save it when they're done, built in React.
 
 [Demo](https://emilydoh.github.io/Pixelsketch/)
 
