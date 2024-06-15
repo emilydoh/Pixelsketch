@@ -51,12 +51,17 @@ h2 {
 .grid {
     display: grid;
     box-shadow: 3px 3px #26272a;
+    cursor: pointer;
 }
 
 .pixel {
     width: 30px;
     height: 30px;
     border: 1px solid #c5c5c5;
+}
+
+.pixelsk{
+    color: #76ABAE;
 }
 
 .colorPicker {
@@ -66,7 +71,9 @@ h2 {
     background-color: transparent;
     margin-top: 5px;
     padding: 5px;
+    cursor: pointer;
 }
+
 
 p {
     color:#31363F;
@@ -80,6 +87,7 @@ select {
     color: #383a3e;
     text-align: center;
     margin-top: 1px;
+    cursor: pointer;
 }
 
 button {
@@ -92,6 +100,12 @@ button {
     margin-top: 12px;
     font-size: 28px;
     box-shadow: 3px 3px #26272a;
+    cursor: pointer;
+}
+
+button:hover{
+color: #76ABAE;
+background-color: #26272a;
 }
 
 .sidebarTextItemContainer {
@@ -105,6 +119,12 @@ button {
     align-items: center;
     margin-top: 12px;
     box-shadow: 3px 3px #26272a;
+    cursor: pointer;
+}
+
+.sidebarTextItemContainer:hover{
+    color:#383a3e;
+    background-color: #07e4ef;
 }
 
 h2 {

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className='app'>
-      <h1>Pixelsketch</h1>
+      <h1 className='pixelsk'>Pixelsketch</h1>
       <Grid></Grid>
     </div>
   )
