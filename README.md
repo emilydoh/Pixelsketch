@@ -33,4 +33,5 @@ npm run dev
 
 ## Art Gallery
 ![amanda's cute animal pixel art](https://github.com/emilydoh/Pixelsketch/assets/113153067/17c1974e-bfca-475c-97ec-6f9a1357aa22)
+![amanda frog resized](https://github.com/emilydoh/Pixelsketch/assets/113153067/90503549-0ead-48c2-888f-8f43689dcb03)
 
